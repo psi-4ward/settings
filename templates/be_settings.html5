@@ -1,0 +1,57 @@
+<style type="text/css">
+	.settings .tl_tbox
+	{
+		padding-bottom: 0;
+	}
+	.settings .item
+	{
+		width:90px;
+		height:70px;
+		margin-right: 8px;
+		margin-bottom: 5px;
+		margin-top: 15px;
+		float:left;
+		text-align: center;
+	}
+	.settings .item span
+	{
+		display: block;
+	}
+	.settings .item img
+	{
+		opacity: 0.8;
+	}
+	.settings .item a:hover img
+	{
+		opacity: 1.0;
+	}
+
+</style>
+
+
+<div id="tl_buttons">
+<a href="<?php echo $this->href; ?>" class="header_back" title="<?php echo $this->title; ?>"><?php echo $this->button; ?></a> &nbsp; :: &nbsp;
+<a href="contao/main.php?do=settings&table=tl_settings" class="header_edit_all" title="<?php echo $GLOBALS['TL_LANG']['settings']['coreSettings']; ?>"><?php echo $GLOBALS['TL_LANG']['settings']['coreSettings']; ?></a>
+</div>
+
+<h2 class="sub_headline"><?php echo $GLOBALS['TL_LANG']['settings']['headline']; ?></h2>
+
+<div class="tl_formbody_edit settings">
+
+	<?php foreach($this->arrSettings AS $fieldset => $arrItems): ?>
+	<fieldset class="tl_tbox">
+		<legend style="cursor: default;"><?php echo $GLOBALS['TL_LANG']['settings'][$fieldset]; ?></legend>
+		<?php foreach($arrItems as $setting): ?>
+		<div class="item">
+			<a href="<?php echo $setting['href']; ?>">
+				<img src="<?php echo $setting['icon']; ?>" alt="">
+				<span><?php echo $setting['label']; ?></span>
+			</a>
+		</div>
+		<?php endforeach; ?>
+	</fieldset>
+	<?php endforeach; ?>
+
+
+
+</div>
