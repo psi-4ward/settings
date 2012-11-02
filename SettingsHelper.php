@@ -23,5 +23,48 @@ class SettingsHelper extends System
 			}
 		}
 	}
-	
+
+
+
+
+	/**
+	 * Return all modules except back end and front end as array
+	 * @return array
+	 */
+	public function getModules()
+	{
+		$arrReturn = array();
+		$arrModules = scan(TL_ROOT . '/system/modules');
+
+		$arrInactiveModules = deserialize($GLOBALS['TL_CONFIG']['inactiveModules']);
+		$blnCheckInactiveModules = is_array($arrInactiveModules);
+
+		foreach ($arrModules as $strModule)
+		{
+			if (substr($strModule, 0, 1) == '.')
+			{
+				continue;
+			}
+
+			if ($strModule == 'backend' || $strModule == 'frontend' || !is_dir(TL_ROOT . '/system/modules/' . $strModule) || $strModule == 'settings')
+			{
+				continue;
+			}
+
+			if ($blnCheckInactiveModules && in_array($strModule, $arrInactiveModules))
+			{
+				$strFile = sprintf('%s/system/modules/%s/languages/%s/modules.php', TL_ROOT, $strModule, $GLOBALS['TL_LANGUAGE']);
+
+				if (file_exists($strFile))
+				{
+					include($strFile);
+				}
+			}
+
+			$arrReturn[$strModule] = '<span style="color:#b3b3b3">['. $strModule .']</span> ' . (is_array($GLOBALS['TL_LANG']['MOD'][$strModule]) ? $GLOBALS['TL_LANG']['MOD'][$strModule][0] : $GLOBALS['TL_LANG']['MOD'][$strModule]);
+		}
+
+		natcasesort($arrReturn);
+		return $arrReturn;
+	}
 }

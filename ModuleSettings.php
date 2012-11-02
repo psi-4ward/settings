@@ -54,7 +54,7 @@ class ModuleSettings extends BackendModule
 		{
 			asort($arrSettings[$k]);
 		}
-		asort($arrSettings);
+		ksort($arrSettings,SORT_STRING);
 
 		$this->Template->arrSettings = $arrSettings;
 
@@ -106,7 +106,9 @@ class ModuleSettings extends BackendModule
 			}
 		}
 
+		require_once('ChromePhp.php'); \ChromePhp::log($arrSettings);
 		return $arrSettings;
+
 
 	}
 
