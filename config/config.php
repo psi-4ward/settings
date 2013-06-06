@@ -1,25 +1,36 @@
-<?php if(!defined('TL_ROOT')) {die('You cannot access this file directly!');
-}
+<?php if(!defined('TL_ROOT')) { die('You cannot access this file directly!'); }
 
 /**
- * @copyright 4ward.media 2012 <http://www.4wardmedia.de>
- * @author Christoph Wiechert <wio@psitrax.de>
+ * Quickjump4ward
+ *
+ * @copyright  4ward.media 2012 <http://www.4wardmedia.de>
+ * @author     Christoph Wiechert <christoph.wiechert@4wardmedia.de>
+ * @package    settings4ward
+ * @license    LGPL 
+ * @link       https://github.com/psi-4ward/settings
+ * @filesource
  */
  
 // Hack to display the config overview-page
-if(!isset($_GET['table']) || !empty($_GET['table'])<1) {
+if(!isset($_GET['table']) || !empty($_GET['table'])<1) 
+{
 	$GLOBALS['BE_MOD']['system']['settings']['callback'] = 'ModuleSettings';
 }
 
 // registry
-$GLOBALS['BE_MOD']['system']['settings']['tables'][] = 'tl_registry';
-$GLOBALS['SETTINGS']['system_settings']['registry'] = array
+$GLOBALS['BE_MOD']['system']['settings']['tables'][]   = 'tl_registry';
+
+$GLOBALS['SETTINGS']['system_settings']['registry']    = array
 (
 	'icon'		=> 'system/modules/settings/html/registry.png',
 	'table'		=> 'tl_registry',
 	// href 	=> 'contao/main.php?do=settings&AnythingWhatYourExtensionSouldDo
 );
-$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Registry', 'replaceInsertTags');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][]            = array
+(
+  'Registry', 
+  'replaceInsertTags'
+);
 
 /*
  * Settings Icons for legend

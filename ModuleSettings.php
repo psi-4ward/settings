@@ -1,9 +1,14 @@
-<?php if(!defined('TL_ROOT')) {die('You cannot access this file directly!');
-}
+<?php if(!defined('TL_ROOT')) { die('You cannot access this file directly!'); }
 
 /**
- * @copyright 4ward.media 2012 <http://www.4wardmedia.de>
- * @author Christoph Wiechert <wio@psitrax.de>
+ * Quickjump4ward
+ *
+ * @copyright  4ward.media 2012 <http://www.4wardmedia.de>
+ * @author     Christoph Wiechert <christoph.wiechert@4wardmedia.de>
+ * @package    settings4ward
+ * @license    LGPL 
+ * @link       https://github.com/psi-4ward/settings
+ * @filesource
  */
  
 class ModuleSettings extends BackendModule
