@@ -56,23 +56,20 @@ $GLOBALS['SETTINGS4WARD']['sort'] = array
   'repository_legend'	=> 'mod_settings',
 );
 
-$GLOBALS['SETTINGS4WARD']['icon'] = array
-(
-  'title_legend'		  => 'system/modules/settings/html/icons/title_legend.png',
-  'date_legend'		    => 'system/modules/settings/html/icons/date_legend.png',
-  'global_legend'		  => 'system/modules/settings/html/icons/global_legend.png',
-  'backend_legend'	  => 'system/modules/settings/html/icons/backend_legend.png',
-  'frontend_legend'	  => 'system/modules/settings/html/icons/frontend_legend.png',
-  'cache_legend'		  => 'system/modules/settings/html/icons/cache_legend.png',
-  'privacy_legend'	  => 'system/modules/settings/html/icons/privacy_legend.png',
-  'security_legend'	  => 'system/modules/settings/html/icons/security_legend.png',
-  'files_legend'		  => 'system/modules/settings/html/icons/files_legend.png',
-  'uploads_legend'	  => 'system/modules/settings/html/icons/uploads_legend.png',
-  'search_legend'		  => 'system/modules/settings/html/icons/search_legend.png',
-  'modules_legend'	  => 'system/modules/settings/html/icons/modules_legend.png',
-  'timeout_legend'	  => 'system/modules/settings/html/icons/timeout_legend.png',
-  'chmod_legend'		  => 'system/modules/settings/html/icons/chmod_legend.png',
-  'update_legend'		  => 'system/modules/settings/html/icons/update_legend.png',
-  'smtp_legend'		    => 'system/modules/settings/html/icons/smtp_legend.png',
-  'repository_legend'	=> 'system/modules/settings/html/icons/repository_legend.png',
-);
+$GLOBALS['SETTINGS4WARD']['icon']['title_legend'] = 'system/modules/settings/html/icons/title_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['date_legend'] = 'system/modules/settings/html/icons/date_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['global_legend'] = 'system/modules/settings/html/icons/global_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['backend_legend'] = 'system/modules/settings/html/icons/backend_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['frontend_legend'] = 'system/modules/settings/html/icons/frontend_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['cache_legend'] = 'system/modules/settings/html/icons/cache_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['privacy_legend'] = 'system/modules/settings/html/icons/privacy_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['security_legend'] = 'system/modules/settings/html/icons/security_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['files_legend'] = 'system/modules/settings/html/icons/files_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['uploads_legend'] = 'system/modules/settings/html/icons/uploads_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['search_legend'] = 'system/modules/settings/html/icons/search_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['modules_legend'] = 'system/modules/settings/html/icons/modules_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['timeout_legend'] = 'system/modules/settings/html/icons/timeout_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['chmod_legend'] = 'system/modules/settings/html/icons/chmod_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['update_legend'] = 'system/modules/settings/html/icons/update_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['smtp_legend'] = 'system/modules/settings/html/icons/smtp_legend.png';
+$GLOBALS['SETTINGS4WARD']['icon']['repository_legend'] = 'system/modules/settings/html/icons/repository_legend.png';
